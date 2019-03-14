@@ -32,10 +32,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="spaces-braces"></a>
-    No spaces after `(`, `[` or before `]`, `)`.
+  * No spaces after `(`, `[` or before `]`, `)`.
     Use spaces around `{` and before `}`.
-    <sup>[[link](#spaces-braces)]</sup>
 
     ```ruby
     # bad
@@ -47,10 +45,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     [1, 2, 3].each { |e| puts e }
     ```
 
-  * <a name="spaces-around-equals"></a>
-    Use spaces around the `=` operator when assigning default values to method
+  * Use spaces around the `=` operator when assigning default values to method
     parameters:
-    <sup>[[link](#spaces-around-equals)]</sup>
 
     ```ruby
     # bad
@@ -64,12 +60,10 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="no-double-indent"></a>
-    Align the parameters of a method call if they span more than one
+  * Align the parameters of a method call if they span more than one
     line. When aligning parameters is not appropriate due to line-length
     constraints, single indent for the lines after the first is also
     acceptable.
-    <sup>[[link](#no-double-indent)]</sup>
 
     ```ruby
     # starting point (line is too long)
@@ -105,9 +99,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="align-multiline-arrays"></a>
-    Align the elements of array literals spanning multiple lines.
-    <sup>[[link](#align-multiline-arrays)]</sup>
+  * Align the elements of array literals spanning multiple lines.
 
     ```ruby
     # bad - single indent
@@ -128,10 +120,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 
 ## Syntax
 
-  * <a name="method-parens"></a>
-    Use `def` with parentheses when there are parameters. Omit the
+  * Use `def` with parentheses when there are parameters. Omit the
     parentheses when the method doesn't accept any parameters.
-    <sup>[[link](#method-parens)]</sup>
 
     ```ruby
     # bad
@@ -155,11 +145,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="method-invocation-parens"></a>
-    Use parentheses around the arguments of method invocations,
+  * Use parentheses around the arguments of method invocations,
     especially if the first argument begins with an open parenthesis `(`,
     as in `f((3 + 2) + 1)`.
-    <sup>[[link](#method-invocation-parens)]</sup>
 
     ```ruby
     # bad
@@ -209,11 +197,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
         end
         ```
 
-  * <a name="optional-arguments"></a>
-    Define optional arguments at the end of the list of arguments.
+  * Define optional arguments at the end of the list of arguments.
     Ruby has some unexpected results when calling methods that have
     optional arguments at the front of the list.
-    <sup>[[link](#optional-arguments)]</sup>
 
     ```ruby
     # bad
@@ -235,9 +221,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     some_method('w', 'x', 'y', 'z') # => 'y, z, w, x'
     ```
 
-  * <a name="boolean-keyword-arguments"></a>
-    Use keyword arguments when passing boolean argument to a method.
-    <sup>[[link](#boolean-keyword-arguments)]</sup>
+  * Use keyword arguments when passing boolean argument to a method.
 
     ```Ruby
     # bad
@@ -260,9 +244,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     some_method(bar: true) # => true
     ```
 
-  * <a name="keyword-arguments-vs-optional-arguments"></a>
-    Prefer keyword arguments over optional arguments.
-    <sup>[[link](#keyword-arguments-vs-optional-arguments)]</sup>
+  * Prefer keyword arguments over optional arguments.
 
     ```Ruby
     # bad
@@ -276,9 +258,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="keyword-arguments-vs-option-hashes"></a>
-    Use keyword arguments instead of option hashes.
-    <sup>[[link](#keyword-arguments-vs-option-hashes)]</sup>
+  * Use keyword arguments instead of option hashes.
 
     ```Ruby
     # bad
@@ -293,10 +273,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="if-as-a-modifier"></a>
-    Favor modifier `if`/`unless` usage when you have a single-line body. Another
+  * Favor modifier `if`/`unless` usage when you have a single-line body. Another
     good alternative is the usage of control flow `&&`/`||`.
-    <sup>[[link](#if-as-a-modifier)]</sup>
 
     ```ruby
     # bad
@@ -311,9 +289,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     some_condition && do_something
     ```
 
-  * <a name="unless-for-negatives"></a>
-    Favor `unless` over `if` for negative conditions (or control flow `||`).
-    <sup>[[link](#unless-for-negatives)]</sup>
+  * Favor `unless` over `if` for negative conditions (or control flow `||`).
 
     ```ruby
     # bad
@@ -329,9 +305,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     some_condition || do_something
     ```
 
-  * <a name="no-braces-opts-hash"></a>
-    Omit the outer braces around an implicit options hash.
-    <sup>[[link](#no-braces-opts-hash)]</sup>
+  * Omit the outer braces around an implicit options hash.
 
     ```ruby
     # bad
@@ -341,9 +315,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     user.set(name: 'John', age: 45, permissions: { read: true })
     ```
 
-  * <a name="single-action-blocks"></a>
-    Use the proc invocation shorthand when the invoked method is the only operation of a block.
-    <sup>[[link](#single-action-blocks)]</sup>
+  * Use the proc invocation shorthand when the invoked method is the only operation of a block.
 
     ```ruby
     # bad
@@ -353,12 +325,10 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     names.map(&:upcase)
     ```
 
-  * <a name="single-line-blocks"></a>
-    Prefer `{...}` over `do...end` for single-line blocks.  Avoid using `{...}`
+  * Prefer `{...}` over `do...end` for single-line blocks.  Avoid using `{...}`
     for multi-line blocks (multi-line chaining is always ugly). Always use
     `do...end` for "control flow" and "method definitions" (e.g. in Rakefiles and
     certain DSLs).  Avoid `do...end` when chaining.
-    <sup>[[link](#single-line-blocks)]</sup>
 
     ```ruby
     names = %w[Bozhidar Steve Sarah]
@@ -384,11 +354,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     but they should ask themselves&mdash;is this code really readable and can the
     blocks' contents be extracted into nifty methods?
 
-  * <a name="block-argument"></a>
-    Consider using explicit block argument to avoid writing block literal that
+  * Consider using explicit block argument to avoid writing block literal that
     just passes its arguments to another block. Beware of the performance impact,
     though, as the block gets converted to a Proc.
-    <sup>[[link](#block-argument)]</sup>
 
     ```ruby
     require 'tempfile'
@@ -412,9 +380,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="no-explicit-return"></a>
-    Avoid `return` where not required for flow of control.
-    <sup>[[link](#no-explicit-return)]</sup>
+  * Avoid `return` where not required for flow of control.
 
     ```ruby
     # bad
@@ -428,10 +394,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="eql"></a>
-    Do not use `eql?` when using `==` will do. The stricter comparison semantics
+  * Do not use `eql?` when using `==` will do. The stricter comparison semantics
     provided by `eql?` are rarely needed in practice.
-    <sup>[[link](#eql)]</sup>
 
     ```ruby
     # bad - eql? is the same as == for strings
@@ -442,10 +406,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     1.0.eql? x # eql? makes sense here if want to differentiate between Integer and Float 1
     ```
 
-  * <a name="no-non-nil-checks"></a>
-    Don't do explicit non-`nil` checks unless you're dealing with boolean
+  * Don't do explicit non-`nil` checks unless you're dealing with boolean
     values.
-    <sup>[[link](#no-non-nil-checks)]</sup>
 
     ```ruby
     # bad
@@ -461,21 +423,17 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="map-find-select-reduce-size"></a>
-    Prefer `map` over `collect`, `find` over `detect`, `select` over `find_all`,
+  * Prefer `map` over `collect`, `find` over `detect`, `select` over `find_all`,
     `reduce` over `inject` and `size` over `length`. This is not a hard
     requirement; if the use of the alias enhances readability, it's ok to use it.
     The rhyming methods are inherited from Smalltalk and are not common in other
     programming languages. The reason the use of `select` is encouraged over
     `find_all` is that it goes together nicely with `reject` and its name is
     pretty self-explanatory.
-    <sup>[[link](#map-find-select-reduce-size)]</sup>
 
-  * <a name="count-vs-size"></a>
-    Don't use `count` as a substitute for `size`. For `Enumerable` objects other
+  * Don't use `count` as a substitute for `size`. For `Enumerable` objects other
     than `Array` it will iterate the entire collection in order to determine its
     size.
-    <sup>[[link](#count-vs-size)]</sup>
 
     ```ruby
     # bad
@@ -487,9 +445,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 
 ## Naming
 
-  * <a name="snake-case-symbols-methods-vars-with-numbers"></a>
-    Do not separate numbers from letters on symbols, methods and variables.
-    <sup>[[link](#snake-case-symbols-methods-vars-with-numbers)]</sup>
+  * Do not separate numbers from letters on symbols, methods and variables.
 
     ```ruby
     # bad
@@ -515,11 +471,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="bool-methods-prefix"></a>
-    Avoid prefixing predicate methods with the auxiliary verbs such as `is`,
+  * Avoid prefixing predicate methods with the auxiliary verbs such as `is`,
     `does`, or `can`.  These words are redundant and inconsistent with the style of
     boolean methods in the Ruby core library, such as `empty?` and `include?`.
-    <sup>[[link](#bool-methods-prefix)]</sup>
 
     ```ruby
     # bad
@@ -561,26 +515,18 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 > it even clearer. <br>
 > -- Steve McConnell
 
-  * <a name="refactor-dont-comment"></a>
-    Avoid writing comments to explain bad code. Refactor the code to make it
+  * Avoid writing comments to explain bad code. Refactor the code to make it
     self-explanatory. ("Do or do not&mdash;there is no try." Yoda)
-    <sup>[[link](#refactor-dont-comment)]</sup>
 
-  * <a name="annotate-above"></a>
-    Annotations should usually be written on the line immediately above the
+  * Annotations should usually be written on the line immediately above the
     relevant code.
-    <sup>[[link](#annotate-above)]</sup>
 
-  * <a name="annotate-keywords"></a>
-    The annotation keyword is followed by a colon and a space, then a note
+  * The annotation keyword is followed by a colon and a space, then a note
     describing the problem.
-    <sup>[[link](#annotate-keywords)]</sup>
 
-  * <a name="indent-annotations"></a>
-    If multiple lines are required to describe the problem, subsequent lines
+  * If multiple lines are required to describe the problem, subsequent lines
     should be indented three spaces after the `#` (one general plus two for
     indentation purpose).
-    <sup>[[link](#indent-annotations)]</sup>
 
     ```ruby
     def bar
@@ -590,11 +536,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="rare-eol-annotations"></a>
-    In cases where the problem is so obvious that any documentation would be
+  * In cases where the problem is so obvious that any documentation would be
     redundant, annotations may be left at the end of the offending line with no
     note. This usage should be the exception and not the rule.
-    <sup>[[link](#rare-eol-annotations)]</sup>
 
     ```ruby
     def bar
@@ -602,41 +546,27 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="todo"></a>
-    Use `TODO` to note missing features or functionality that should be added at
+  * Use `TODO` to note missing features or functionality that should be added at
     a later date.
-    <sup>[[link](#todo)]</sup>
 
-  * <a name="fixme"></a>
-    Use `FIXME` to note broken code that needs to be fixed.
-    <sup>[[link](#fixme)]</sup>
+  * Use `FIXME` to note broken code that needs to be fixed.
 
-  * <a name="optimize"></a>
-    Use `OPTIMIZE` to note slow or inefficient code that may cause performance
+  * Use `OPTIMIZE` to note slow or inefficient code that may cause performance
     problems.
-    <sup>[[link](#optimize)]</sup>
 
-  * <a name="hack"></a>
-    Use `HACK` to note code smells where questionable coding practices were used
+  * Use `HACK` to note code smells where questionable coding practices were used
     and should be refactored away.
-    <sup>[[link](#hack)]</sup>
 
-  * <a name="review"></a>
-    Use `REVIEW` to note anything that should be looked at to confirm it is
+  * Use `REVIEW` to note anything that should be looked at to confirm it is
     working as intended. For example: `REVIEW: Are we sure this is how the client
     does X currently?`
-    <sup>[[link](#review)]</sup>
 
-  * <a name="document-annotations"></a>
-    Use other custom annotation keywords if it feels appropriate, but be sure to
+  * Use other custom annotation keywords if it feels appropriate, but be sure to
     document them in your project's `README` or similar.(Here!)
-    <sup>[[link](#document-annotations)]</sup>
 
 ## Classes & Modules
 
-  * <a name="consistent-classes"></a>
-    Use a consistent structure in your class definitions.
-    <sup>[[link](#consistent-classes)]</sup>
+  * Use a consistent structure in your class definitions.
 
     ```ruby
     class Person
@@ -681,9 +611,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="mixin-grouping"></a>
-    Split multiple mixins into separate statements.
-    <sup>[[link](#mixin-grouping)]</sup>
+  * Split multiple mixins into separate statements.
 
     ```ruby
     # bad
@@ -699,10 +627,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="file-classes"></a>
-    Don't nest multi-line classes within classes. Try to have such nested
+  * Don't nest multi-line classes within classes. Try to have such nested
     classes each in their own file in a folder named like the containing class.
-    <sup>[[link](#file-classes)]</sup>
 
     ```ruby
     # bad
@@ -742,10 +668,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="modules-vs-classes"></a>
-    Prefer modules to classes with only class methods. Classes should be used
+  * Prefer modules to classes with only class methods. Classes should be used
     only when it makes sense to create instances out of them.
-    <sup>[[link](#modules-vs-classes)]</sup>
 
     ```ruby
     # bad
@@ -773,9 +697,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="attr_family"></a>
-    Use the `attr` family of functions to define trivial accessors or mutators.
-    <sup>[[link](#attr_family)]</sup>
+  * Use the `attr` family of functions to define trivial accessors or mutators.
 
     ```ruby
     # bad
@@ -805,12 +727,10 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="accessor_mutator_method_names"></a>
-    For accessors and mutators, avoid prefixing method names with
+  * For accessors and mutators, avoid prefixing method names with
     `get_` and `set_`.
     It is a Ruby convention to use attribute names for accessors (readers) and
     `attr_name=` for mutators (writers).
-    <sup>[[link](#accessor_mutator_method_names)]</sup>
 
     ```ruby
     # bad
@@ -836,10 +756,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="struct-new"></a>
-    Consider using `Struct.new`, which defines the trivial accessors,
+  * Consider using `Struct.new`, which defines the trivial accessors,
     constructor and comparison operators for you.
-    <sup>[[link](#struct-new)]</sup>
 
     ```ruby
     # good
@@ -857,18 +775,14 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="visibility"></a>
-    Assign proper visibility levels to methods (`private`, `protected`) in
+  * Assign proper visibility levels to methods (`private`, `protected`) in
     accordance with their intended usage. Don't go off leaving everything `public`
     (which is the default). After all we're coding in *Ruby* now, not in *Python*.
-    <sup>[[link](#visibility)]</sup>
 
-  * <a name="indent-public-private-protected"></a>
-    Indent the `public`, `protected`, and `private` methods as much as the method
+  * Indent the `public`, `protected`, and `private` methods as much as the method
     definitions they apply to. Leave one blank line above the visibility modifier
     and one blank line below in order to emphasize that it applies to all methods
     below it.
-    <sup>[[link](#indent-public-private-protected)]</sup>
 
     ```ruby
     class SomeClass
@@ -888,10 +802,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="def-self-class-methods"></a>
-    Use `def self.method` to define class methods. This makes the code
+  * Use `def self.method` to define class methods. This makes the code
     easier to refactor since the class name is not repeated.
-    <sup>[[link](#def-self-class-methods)]</sup>
 
     ```ruby
     class TestClass
@@ -921,10 +833,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 
 ### Constructors
 
-  * <a name="factory-methods"></a>
-    Consider adding factory methods to provide additional sensible ways to
+  * Consider adding factory methods to provide additional sensible ways to
     create instances of a particular class.
-    <sup>[[link](#factory-methods)]</sup>
 
     ```ruby
     class Person
@@ -936,10 +846,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 
 ## Collections
 
-  * <a name="literal-array-hash"></a>
-    Prefer literal array and hash creation notation (unless you need to pass
+  * Prefer literal array and hash creation notation (unless you need to pass
     parameters to their constructors, that is).
-    <sup>[[link](#literal-array-hash)]</sup>
 
     ```ruby
     # bad
@@ -953,11 +861,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     hash = Hash.new(0)
     ```
 
-  * <a name="percent-w"></a>
-    Prefer `%w` to the literal array syntax when you need an array of words
+  * Prefer `%w` to the literal array syntax when you need an array of words
     (non-empty strings without spaces and special characters in them).  Apply this
     rule only to arrays with two or more elements.
-    <sup>[[link](#percent-w)]</sup>
 
     ```ruby
     # bad
@@ -967,11 +873,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     STATES = %w[draft open closed]
     ```
 
-  * <a name="percent-i"></a>
-    Prefer `%i` to the literal array syntax when you need an array of symbols
+  * Prefer `%i` to the literal array syntax when you need an array of symbols
     (and you don't need to maintain Ruby 1.9 compatibility). Apply this rule only
     to arrays with two or more elements.
-    <sup>[[link](#percent-i)]</sup>
 
     ```ruby
     # bad
@@ -981,10 +885,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     STATES = %i[draft open closed]
     ```
 
-  * <a name="no-trailing-array-commas"></a>
-    Avoid comma after the last item of an `Array` or `Hash` literal, especially
+  * Avoid comma after the last item of an `Array` or `Hash` literal, especially
     when the items are not on separate lines.
-    <sup>[[link](#no-trailing-array-commas)]</sup>
 
     ```ruby
     # bad - easier to move/add/remove items, but still not preferred
@@ -1001,21 +903,15 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     VALUES = [1001, 2020, 3333]
     ```
 
-  * <a name="first-and-last"></a>
-    When accessing the first or last element from an array, prefer `first` or
+  * When accessing the first or last element from an array, prefer `first` or
     `last` over `[0]` or `[-1]`.
-    <sup>[[link](#first-and-last)]</sup>
 
-  * <a name="set-vs-array"></a>
-    Use `Set` instead of `Array` when dealing with unique elements. `Set`
+  * Use `Set` instead of `Array` when dealing with unique elements. `Set`
     implements a collection of unordered values with no duplicates. This is a
     hybrid of `Array`'s intuitive inter-operation facilities and `Hash`'s fast
     lookup.
-    <sup>[[link](#set-vs-array)]</sup>
 
-  * <a name="symbols-as-keys"></a>
-    Prefer symbols instead of strings as hash keys.
-    <sup>[[link](#symbols-as-keys)]</sup>
+  * Prefer symbols instead of strings as hash keys.
 
     ```ruby
     # bad
@@ -1025,13 +921,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     hash = { one: 1, two: 2, three: 3 }
     ```
 
-  * <a name="no-mutable-keys"></a>
-    Avoid the use of mutable objects as hash keys.
-    <sup>[[link](#no-mutable-keys)]</sup>
+  * Avoid the use of mutable objects as hash keys.
 
-  * <a name="hash-literals"></a>
-    Use the Ruby 1.9 hash literal syntax when your hash keys are symbols.
-    <sup>[[link](#hash-literals)]</sup>
+  * Use the Ruby 1.9 hash literal syntax when your hash keys are symbols.
 
     ```ruby
     # bad
@@ -1041,11 +933,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     hash = { one: 1, two: 2, three: 3 }
     ```
 
-  * <a name="no-mixed-hash-syntaces"></a>
-    Don't mix the Ruby 1.9 hash syntax with hash rockets in the same hash
+  * Don't mix the Ruby 1.9 hash syntax with hash rockets in the same hash
     literal. When you've got keys that are not symbols stick to the hash rockets
     syntax.
-    <sup>[[link](#no-mixed-hash-syntaces)]</sup>
 
     ```ruby
     # bad
@@ -1055,10 +945,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     { :a => 1, 'b' => 2 }
     ```
 
-  * <a name="hash-key"></a>
-    Use `Hash#key?` instead of `Hash#has_key?` and `Hash#value?` instead of
+  * Use `Hash#key?` instead of `Hash#has_key?` and `Hash#value?` instead of
     `Hash#has_value?`.
-    <sup>[[link](#hash-key)]</sup>
 
     ```ruby
     # bad
@@ -1070,10 +958,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     hash.value?(value)
     ```
 
-  * <a name="hash-each"></a>
-    Use `Hash#each_key` instead of `Hash#keys.each` and `Hash#each_value`
+  * Use `Hash#each_key` instead of `Hash#keys.each` and `Hash#each_value`
     instead of `Hash#values.each`.
-    <sup>[[link](#hash-each)]</sup>
 
     ```ruby
     # bad
@@ -1087,9 +973,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     hash.each_value { |v| p v }
     ```
 
-  * <a name="hash-fetch"></a>
-    Use `Hash#fetch` when dealing with hash keys that should be present.
-    <sup>[[link](#hash-fetch)]</sup>
+  * Use `Hash#fetch` when dealing with hash keys that should be present.
 
     ```ruby
     heroes = { batman: 'Bruce Wayne', superman: 'Clark Kent' }
@@ -1101,10 +985,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     heroes.fetch(:supermann)
     ```
 
-  * <a name="hash-fetch-defaults"></a>
-    Introduce default values for hash keys via `Hash#fetch` as opposed to using
+  * Introduce default values for hash keys via `Hash#fetch` as opposed to using
     custom logic.
-    <sup>[[link](#hash-fetch-defaults)]</sup>
 
     ```ruby
     batman = { name: 'Bruce Wayne', is_evil: false }
@@ -1116,10 +998,8 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     batman.fetch(:is_evil, true) # => false
     ```
 
-  * <a name="use-hash-blocks"></a>
-    Prefer the use of the block instead of the default value in `Hash#fetch`
+  * Prefer the use of the block instead of the default value in `Hash#fetch`
     if the code that has to be evaluated may have side effects or be expensive.
-    <sup>[[link](#use-hash-blocks)]</sup>
 
     ```ruby
     batman = { name: 'Bruce Wayne' }
@@ -1132,10 +1012,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     batman.fetch(:powers) { obtain_batman_powers }
     ```
 
-  * <a name="hash-values-at"></a>
-    Use `Hash#values_at` when you need to retrieve several values consecutively
+  * Use `Hash#values_at` when you need to retrieve several values consecutively
     from a hash.
-    <sup>[[link](#hash-values-at)]</sup>
+    
 
     ```ruby
     # bad
@@ -1146,12 +1025,10 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     email, username = data.values_at('email', 'nickname')
     ```
 
-  * <a name="provide-alternate-accessor-to-collections"></a>
-    When providing an accessor for a collection, provide an alternate form
+  * When providing an accessor for a collection, provide an alternate form
     to save users from checking for `nil` before accessing an element in
     the collection.
-    <sup>[[link](#provide-alternate-accessor-to-collections)]</sup>
-
+    
     ```ruby
     # bad
     def awesome_things
@@ -1170,11 +1047,9 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 
 ## Strings
 
-  * <a name="string-interpolation"></a>
-    Prefer string interpolation and string formatting instead of string
+  * Prefer string interpolation and string formatting instead of string
     concatenation:
-    <sup>[[link](#string-interpolation)]</sup>
-
+    
     ```ruby
     # bad
     email_with_name = user.name + ' <' + user.email + '>'
@@ -1186,12 +1061,10 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     email_with_name = format('%s <%s>', user.name, user.email)
     ```
 
-  * <a name="consistent-string-literals"></a>
-    Adopt a consistent string literal quoting style. There are two popular
+  * Adopt a consistent string literal quoting style. There are two popular
     styles in the Ruby community, both of which are considered good&mdash;single
     quotes by default (Option A) and double quotes by default (Option B).
-    <sup>[[link](#consistent-string-literals)]</sup>
-
+    
       * **(Option A)** Prefer single-quoted strings when you don't need
         string interpolation or special symbols such as `\t`, `\n`, `'`,
         etc.
@@ -1225,13 +1098,11 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 
     The string literals in this guide are aligned with the first style.
 
-  * <a name="concat-strings"></a>
-    Avoid using `String#+` when you need to construct large data chunks.
+  * Avoid using `String#+` when you need to construct large data chunks.
     Instead, use `String#<<`. Concatenation mutates the string instance in-place
     and is always faster than `String#+`, which creates a bunch of new string
     objects.
-    <sup>[[link](#concat-strings)]</sup>
-
+    
     ```ruby
     # bad
     html = ''
@@ -1250,9 +1121,7 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
     end
     ```
 
-  * <a name="dont-abuse-gsub"></a>
-    Don't use `String#gsub` in scenarios in which you can use a faster and more specialized alternative.
-    <sup>[[link](#dont-abuse-gsub)]</sup>
+  * Don't use `String#gsub` in scenarios in which you can use a faster and more specialized alternative.
 
     ```ruby
     url = 'http://example.com'
@@ -1269,15 +1138,11 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 
 ## Date & Time
 
-  * <a name="time-now"></a>
-    Prefer `Time.now` over `Time.new` when retrieving the current system time.
-    <sup>[[link](#time-now)]</sup>
+  * Prefer `Time.now` over `Time.new` when retrieving the current system time.
 
-  * <a name="no-datetime"></a>
-    Don't use `DateTime` unless you need to account for historical calendar
+  * Don't use `DateTime` unless you need to account for historical calendar
     reform—and if you do, explicitly specify the `start` argument to
     clearly state your intentions.
-    <sup>[[link](#no-datetime)]</sup>
 
     ```ruby
     # bad - uses DateTime for current time
@@ -1298,263 +1163,18 @@ Hopefully we can use this is a base the we can all add to, and edited, depending
 
 ## Misc
 
-  * <a name="always-warn"></a>
-    Write `ruby -w` safe code.
-    <sup>[[link](#always-warn)]</sup>
-
-  * <a name="no-optional-hash-params"></a>
-    Avoid hashes as optional parameters. Does the method do too much? (Object
+  * Avoid hashes as optional parameters. Does the method do too much? (Object
     initializers are exceptions for this rule).
-    <sup>[[link](#no-optional-hash-params)]</sup>
 
-  * <a name="short-methods"></a>
-    Avoid methods longer than 10 LOC (lines of code). Ideally, most methods will
+  * Avoid methods longer than 10 LOC (lines of code). Ideally, most methods will
     be shorter than 5 LOC. Empty lines do not contribute to the relevant LOC.
-    <sup>[[link](#short-methods)]</sup>
 
-  * <a name="too-many-params"></a>
-    Avoid parameter lists longer than three or four parameters.
-    <sup>[[link](#too-many-params)]</sup>
+  * Avoid parameter lists longer than three or four parameters.
 
-  * <a name="no-param-mutations"></a>
-    Do not mutate parameters unless that is the purpose of the method.
-    <sup>[[link](#no-param-mutations)]</sup>
+  * Do not mutate parameters unless that is the purpose of the method.
 
-  * <a name="three-is-the-number-thou-shalt-count"></a>
-    Avoid more than three levels of block nesting.
-    <sup>[[link](#three-is-the-number-thou-shalt-count)]</sup>
+  * Avoid more than three levels of block nesting.
 
-  * <a name="be-consistent"></a>
-    Be consistent. In an ideal world, be consistent with these guidelines.
-    <sup>[[link](#be-consistent)]</sup>
+  * Be consistent. In an ideal world, be consistent with these guidelines
 
-  * <a name="common-sense"></a>
-    Use common sense.
-    <sup>[[link](#common-sense)]</sup>
-
-# Recent Changes
-#### Replacing the using of the Checks class with the CheckSave module where the transaction screen is concerned.
-Saving a check with the default check name.
-```
-@transaction_screen.checks.save_check_with_prefilled_name  # old
-
-@transaction_screen.save_new_check  # new
-```
-Saving and naming a check.
-```
-@transaction_screen.checks.save_and_name_check('Check Name')  # old
-
-@transaction_screen.save_new_check('Check Name')  # new
-```
-`checkname` is an optional parameter
-```
-def save_new_check(checkname = nil)
-  click_save
-  name_check(checkname) unless checkname.nil?
-  complete_saving_check
-end
-```
-
-#### PaymentMethod class replacing some of the functunality currently provided by the SaleTotal class
-This is part of making our classes and modules more focussed. Their functionality should be obvious.
-
-```ruby
-# old
-@transaction_screen.sale_total.pay_cash
-@transaction_screen.sale_total.pay_split_tender
-
-# new
-@transaction_screen.payment_method.pay_cash
-@transaction_screen.payment_method.pay_split_tender
-```
-If in doubt, have a look at the PaymentMethod class. Chances are if the methods is there, you should probably be using that in place of the SaleTotal equivilent.
-
-
-# Syntax preferences
-#### Blocks
-Single line blocks wrapped in curly braces with single spacing either end
-
-```ruby
-2.times { @transaction_screen.transaction_grid.add_generic_item }
-```
-Multi line blocks wrapped in a `do ... end`
-
-```ruby
-2.times do
-  @transaction_screen.transaction_grid.add_generic_item
-  @transaction_screen.save_new_check
-end
-```
-
-### The dumping ground
-need to agree on usage, what is worth pulling out as helper methods.
-are these local or global
-```
-RSpec.describe 'example template' do
-  let(:cashier_passcode)  { '3456' }
-  let(:manager_passcode)  { @appium_config.manager_code }
-  let(:gift_card)         { @appium_config.gift_card_id_1 }
-```
-I'll put this here but it's not exactly relevant yet
-```
-# this will be useful to us at some point in the future.
-# good to have it clear in your head what happends and in what order
-# and this doesn't take into consideration the that the same hooks can be used multiple times
-# so nested contexts could provide you with some unexpected behaviour if you're not careful
-# to the best of my knowledge `around :all` has been deprecated
-# I'm not sure if `around :suite` is a thing!
-
-before :suite {...} 
-  
-before :all {...}
-    
-around :each do
-      
-  before :each {...}
-        
-  example.run
-          
-  after :each {...}
-
-end
-    
-after :all {...}
-
-after :suite {...}
-
-end
-```
-Dumping this here for the time being. I will clean this up
-```
-before :each do
-    receipt_settings.on_screen_tips_enabled
-    BrowserlessBo::Endpoints::Bo::ReceiptSettings.update(bo_context, receipt_settings) # seperate actions that are not related
-      
-    @bo_actions.select_register_type('Restaurant')
-    # get and set are conventions for instance variables however this isn't a ruby convention
-    # we have a decision to make on our own convention here
-    # guest_count_prompt?
-    # guest_count_prompt=
-    @bo_actions.set_guest_count_prompt(false)
-
-    @shift_screen.open_shift.sidebar.close # @shift_screen.open_shift('100.00').sidebar.close
-  end
-  
-  after :each do 
-    @bo_actions.select_register_type('Retail')
-    # consider the actions you take in the back office and be sure to reverse any actions that could effect another test.
-    # assume that any test may follow this one
-  end
-    
-  it 'will perform said task', :android, :skip_bo do # bevity, should vs will, case_id's?, flags
-    @shift_screen.sidebar.sign_out
-    # gaps between screen changes
-    @signin_screen.sign_in @appium_config.manager_code
-    @signin_screen.sign_in '1111'
-    @signin_screen.sign_in(cashier_passcode)
-
-    # needless indentation and curly backets used on a multiline block
-    3.times { @transaction_screen.stock_item_grid.add_item '$10 Discount Only General'
-              @transaction_screen.save_new_check } 
-    3.times do 
-      @transaction_screen.stock_item_grid.add_item '$10 Discount Only General'
-      @transaction_screen.save_new_check
-    end 
-    @checks_screen.select_checks_and_begin_merge('1', '2') # parentheses
-
-    expect(@checks_screen.does_element_exist?('Check Name Placeholder')).to eql true
-    expect(@checks_screen.does_element_exist?('Check Name Placeholder')).to be true
-    # be true, eq for everything else. most everything is a string, does this need to be the case
-
-    @checks_screen.name_check 'Custom'
-    @checks_screen.complete_merge
-    # gaps bewteen 
-    expect(@checks_screen.get_check_name '1').to eql 'Custom'
-    expect(@checks_screen.check_name('1')).to eq('Custom')
-
-    # grouped as they represent one operation
-    # granular is okay because it represents part of the test
-    @checks_screen.enter_select_mode
-    @checks_screen.select_checks('1','2')
-    @checks_screen.open_actions_menu
-    @checks_screen.begin_merge
-
-    expect(@checks_screen.does_element_exist?('Check Name Placeholder')).to eql true
-
-    # and used as part of a method name is generally a no go
-    # consider merge_checks(*check_indecies)
-    @checks_screen.select_checks_and_begin_merge '1', '2'
-
-    # use symbols where possible for keys
-    # symbols used here for percent and amount as it highlights the non arbatrary nature of them
-    # percent, and amount are the only valid options here.
-    # it wont always be clear if ints and symbols will work in place of strings
-    suggested_tips = [
-      { field: 1, type: :percent, value: 60 },
-      { field: 2, type: :amount, value: 10 },
-      { field: 3, type: :percent, value: 80 }
-    ]
-
-    receipt_settings.set_tips(suggested_tips)
-    BrowserlessBo::Endpoints::Bo::ReceiptSettings.update(bo_context, receipt_settings) 
-
-    expect(@shift_screen.correct_menu_options_displayed_to_cashier?).to be true
-    # here the expectation is carried out with the page object. which isn't very upfront and doesn't
-    # provide great debugging potential
-    visible_menu_options = @shift_screen.sidebar.visible_menu_options
-    cashier_menu_options = @shift_screen.sidebar.cashier_menu_options
-    expect(visible_menu_options).to match_array(cashier_menu_options)
-    # actual vs expected compared within the example
-    # a failure would inspect both elements and highight discrepancies
-    # in place of 'expected true, got false
-    expect(@transaction_screen.sale_total.get_total).to eql '8.70'
-    # are we happy with the comparrisons to all be on strings, could get total return a float?
-    # needless step?!
-    expect(@transaction_screen.sale_total.get_total).to eq(8.70)
-
-    # not sure about this expectation, seems like this is more likely to turn a 'broken' test into a 'failing' test
-    expect(@split_tenders_payment_screen.sale_complete?).to be true
-
-    @transaction_screen.wait_until_visible 'Split 51'
-    # wait for something to be true and then confirm just to be sure!!
-    expect(@split_screen.does_element_exist? 'Split 51').to eql true
-  
-    sign_out_and_sign_back_in '3456'
-    # i wouldn't mind helpers returning a variable but I'd rather helper that bundled actions were called on a page object
-  end
-end
-# with all the comments its hard to get spacing across
-
-RSpec.describe '...' do 
-  let(:variable) { '...' }
-  
-  context '...' do 
-    it '...' do
-      @transaction_screen.do_a_thing
-      @transaction_screen.do_another_thing
-      @transaction_screen.access_checks
-
-      @checks_screen.do_some_things
-      @checks_screen.merge_some_checks
-      @checks_screen.access_mergered_check
-
-      @transaction_screen.add_item
-      @transaction_screen.pay_cash
-
-      @transaction_screen.add_items('this', 'that')
-      @transaction_screen.save_new_check
-    end
-  end
-
-  context '...' do 
-    before :each do 
-      [...]
-    end
-
-    it '...' do
-      [...]
-    end
-  end
-end
-```
-
+  * Use common sense.
