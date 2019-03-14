@@ -1,5 +1,5 @@
-[Style Guide](https://github.com/ComputerCampLuv/ruby-style-guide/blob/master/ruby-style-guide)
-[Recent Changes](https://github.com/ComputerCampLuv/ruby-style-guide/blob/master/recent-changes)
+[Style Guide](https://github.com/ComputerCampLuv/ruby-style-guide/blob/master/ruby-style-guide.md)
+[Recent Changes](https://github.com/ComputerCampLuv/ruby-style-guide/blob/master/recent-changes.md)
 
 # The Ruby Style Guide
 
