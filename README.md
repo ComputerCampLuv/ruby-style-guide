@@ -1,3 +1,6 @@
+[Style Guide](https://github.com/ComputerCampLuv/ruby-style-guide/blob/master/ruby-style-guide)
+[Recent Changes](https://github.com/ComputerCampLuv/ruby-style-guide/blob/master/recent-changes)
+
 # The Ruby Style Guide
 
 I've plucked a few choice sections from the [Ruby Style Guide](https://github.com/rubocop-hq/ruby-style-guide), I recommend giving it a read, there's lots of great information.
